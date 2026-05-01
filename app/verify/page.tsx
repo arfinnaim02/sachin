@@ -1,12 +1,12 @@
 import TopBar from "@/components/TopBar";
-import ProfileCard from "@/components/ProfileCard";
+import DemoQrCard from "@/components/DemoQrCard";
 import BottomNav from "@/components/BottomNav";
 
-export default function Home() {
+export default function Verify() {
   return (
     <div className="max-w-[430px] mx-auto bg-white min-h-screen">
-      <TopBar />
-      <ProfileCard />
+      <TopBar showBack />
+      <DemoQrCard />
       <BottomNav />
     </div>
   );
