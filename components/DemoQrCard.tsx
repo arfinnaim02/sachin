@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function DemoQrCard() {
   return (
-    <main className="min-h-screen bg-white px-7 pb-32 pt-6">
+    <main className="w-full bg-white px-7 pb-32 pt-6">
       <div className="flex justify-center">
         <div className="rounded-xl bg-white p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.08)]">
           <Image
@@ -13,7 +13,7 @@ export default function DemoQrCard() {
             width={225}
             height={225}
             priority
-            className="h-[225px] w-[225px] object-contain"
+            className="h-auto w-full max-w-[225px] object-contain"
           />
         </div>
       </div>
@@ -28,6 +28,7 @@ export default function DemoQrCard() {
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-300 text-[17px] font-bold text-gray-950">
               ✓
             </span>
+
             <span className="text-[14px] text-gray-700">Valid</span>
           </div>
 
@@ -36,16 +37,21 @@ export default function DemoQrCard() {
           </p>
         </div>
 
-        <div className="mt-28 flex items-center justify-center gap-8">
-          <div className="flex h-[62px] w-[62px] items-center justify-center rounded-full bg-white shadow-sm">
+        <div className="mt-28 flex w-full items-center justify-center gap-4 min-[380px]:gap-8">
+          <div className="flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-full bg-white shadow-sm">
             <Image src="/vr.png" alt="VR" width={46} height={28} />
           </div>
 
-          <div className="flex h-[62px] w-[62px] items-center justify-center rounded-full bg-white shadow-sm">
-            <Image src="/matkahuolto.png" alt="Matkahuolto" width={50} height={32} />
+          <div className="flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-full bg-white shadow-sm">
+            <Image
+              src="/matkahuolto.png"
+              alt="Matkahuolto"
+              width={50}
+              height={32}
+            />
           </div>
 
-          <div className="flex h-[62px] w-[62px] items-center justify-center rounded-full bg-white shadow-sm">
+          <div className="flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-full bg-white shadow-sm">
             <Image src="/kela.png" alt="Kela" width={48} height={30} />
           </div>
         </div>
